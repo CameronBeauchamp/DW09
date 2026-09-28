@@ -3,18 +3,18 @@
 /// ```
 /// use dw09::average_dollars;
 ///
-/// assert_eq!(average_dollars(750, 4), 1.875);
+/// assert_eq!(average_dollars(750, 4), 1.0);
 /// ```
 ///
 /// ```
 /// use dw09::average_dollars;
 ///
-/// assert_eq!(average_dollars(1000, 4), 2.5);
+/// assert_eq!(average_dollars(1000, 4), 2.0);
 /// ```
 /// Hint: Consider what happens to the decimal values before we 
 /// cast from u32 to f64.
 pub fn average_dollars(total_cents: u32, count: u32) -> f64 {
-    (total_cents / 100.0 / count) as f64 
+    (total_cents / 100 / count) as f64 
 }
 
 /// Compares an average price against a spending limit (both in dollars).
